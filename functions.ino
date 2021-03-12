@@ -1,7 +1,8 @@
 void initSerial() {
   Serial.begin(115200);
-  delay(2000);
+  delay(5000);
   Serial.println("Serial initialized.");
+  Serial.println(WiFi.macAddress());
 }
 
 void initWifi() {
@@ -27,7 +28,7 @@ void initEpochTime() {
     }
   }
 
-  Serial.printf("Epochtime initialized. Current Time: %lu", epochTime);
+  Serial.printf("Epochtime initialized.");
 }
 
 void initDHT() {
